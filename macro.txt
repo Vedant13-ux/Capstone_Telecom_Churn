@@ -1,0 +1,13 @@
+Sub RunPythonScript()
+    
+    Dim objShell As Object
+    Dim PythonExePath As String, PythonScriptPath As String
+
+    Set objShell = VBA.CreateObject("Wscript.Shell")
+    
+    PythonExePath = """C:\Users\vedan\anaconda3\python.exe"""
+    PythonScriptPath = "D:\Marico Projects\ZEN Data\Telecom Churn Modeling\excel_script.py"
+    
+    Shell "cmd.exe /k """"" & PythonExePath & """ """ & PythonScriptPath & """""", vbNormalFocus
+
+End Sub
